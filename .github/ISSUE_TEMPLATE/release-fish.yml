@@ -1,0 +1,21 @@
+name: "🐠 Release a fish / 魚を放す"
+description: "Release a creature into the reef on my profile. / プロフィールのサンゴ礁に生き物を放します。"
+title: "🐠 Release a fish"
+labels: ["fish"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Type the name of a creature from the [field guide](https://kaisco37.github.io/kaisco37/) and press **Create**. A bot will add it to the reef with your GitHub username, then close this issue.
+        **One creature per person** — releasing again replaces your previous one. Only the creature and your username are shown.
+
+        [図鑑](https://kaisco37.github.io/kaisco37/)にいる生き物の名前を入れて **Create** を押してください。ボットがあなたの GitHub のユーザー名と一緒にサンゴ礁へ放し、この Issue を閉じます。
+        **1 人 1 匹まで**で、もう一度放すと前の生き物と入れ替わります。表示するのは生き物とユーザー名だけです。
+  - type: input
+    id: species
+    attributes:
+      label: "Species / 放す生き物"
+      description: "English or Japanese name, or a common alias. / 英名・和名・よく使われる別名のどれでも構いません。"
+      placeholder: "e.g. Manta ray / マンタ / ドリー"
+    validations:
+      required: true

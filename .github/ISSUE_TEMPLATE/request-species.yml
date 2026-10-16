@@ -1,0 +1,27 @@
+name: "🙋 Request a species / 生き物をリクエスト"
+description: "Ask for a creature that isn't in the field guide yet. / 図鑑にまだいない生き物をリクエストします。"
+title: "🙋 Species request: "
+labels: ["species-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell me which creature you'd like to release. When it's added, you'll get a GitHub notification on this issue with a link to release it.
+
+        放したい生き物を教えてください。追加されたら、この Issue で GitHub のお知らせが届き、放すためのリンクをお送りします。
+  - type: input
+    id: name
+    attributes:
+      label: "Species name / 生き物の名前"
+      description: "English or Japanese is fine. / 英名でも和名でも構いません。"
+      placeholder: "e.g. Mandarin dragonet / ニシキテグリ"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: "Reference link (optional) / 参考のリンク（任意）"
+      description: "A photo or Wikipedia page helps me draw it accurately. / 写真や Wikipedia のページがあると正しく描けます。"
+      placeholder: "https://"
+    validations:
+      required: false
